@@ -31,7 +31,7 @@ int main(void)
 
 	while (!feof(pRead))
 	{
-		fscanf(pRead, "%d%s%s%1f", &client.acctNum, client.lastName,
+		fscanf(pRead, "%d%s%s%lf", &client.acctNum, client.lastName,
 			client.firstName, &client.balance);
 
 		fwrite(&client, sizeof(struct clientData), 1, pWrite);
@@ -41,7 +41,7 @@ int main(void)
 	fclose(pRead);
 	fclose(pWrite);
 	printf("以讀取文字檔的ACS|II資料，並轉存成二進位資料檔案\n\n");
-	system("pauce");
+	system("pause");
 
 	printf("\n讀取二進位資料檔案，並格式化輸出如下:\n");
 	if ((cfPtr = fopen("c://credit_bin.txt", "rb")) == NULL)
@@ -58,7 +58,7 @@ int main(void)
 		}
 		fclose(cfPtr);
 	}
-	system("pauce");
+	system("pause");
 	return 0;
 }
 	

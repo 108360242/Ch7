@@ -44,6 +44,6 @@ int main(void)
 		fclose(stream1);
 		fclose(stream2);
 	}
-	system("pauce");
+	system("pause");
 	return 0;
 }
